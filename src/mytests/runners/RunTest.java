@@ -1,8 +1,6 @@
 package mytests.runners;
 
-import mytests.mytestclasses.ListOfArraysTest1;
-import mytests.mytestclasses.NestedArrayTest0;
-import mytests.mytestclasses.NestedArraysTest1;
+import mytests.mytestclasses.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +65,23 @@ public class RunTest {
         System.out.println("ob0.hashCode()==ob2.hashCode(): " + (ob0.hashCode()==ob2.hashCode()));
         System.out.println("ob0.equals(ob3): " + ob0.equals(ob3));
         System.out.println("ob0.hashCode()==ob3.hashCode(): " + (ob0.hashCode()==ob3.hashCode()));
-
+        //----------------------------------------------------------------------------------------
+        System.out.println("--------------SomeClass[]----------------");
+        UtilClass1 uobj1 = new UtilClass1();
+        UtilClass1 uobj2 = uobj1;
+        UtilClass1 uobj3 = new UtilClass1();
+        UtilClass1[] utilClasses1 = new UtilClass1[]{uobj1,null};
+        UtilClass1[] utilClasses2 = new UtilClass1[]{uobj2,null};
+        UtilClass1[] utilClasses3 = new UtilClass1[]{uobj3,uobj1};
+        ObjectArrayTest1 oa0 = new ObjectArrayTest1(utilClasses1);
+        ObjectArrayTest1 oa1 = new ObjectArrayTest1(utilClasses1);
+        ObjectArrayTest1 oa2 = new ObjectArrayTest1(utilClasses2);
+        ObjectArrayTest1 oa3 = new ObjectArrayTest1(utilClasses3);
+        System.out.println("oa0.equals(oa1): " + oa0.equals(oa1));
+        System.out.println("oa0.hashCode()==oa1.hashCode(): " + (oa0.hashCode()==oa1.hashCode()));
+        System.out.println("oa0.equals(oa2): " + oa0.equals(oa2));
+        System.out.println("oa0.hashCode()==oa2.hashCode(): " + (oa0.hashCode()==oa2.hashCode()));
+        System.out.println("oa0.equals(oa3): " + oa0.equals(oa3));
+        System.out.println("oa0.hashCode()==oa3.hashCode(): " + (oa0.hashCode()==oa3.hashCode()));
     }
 }
