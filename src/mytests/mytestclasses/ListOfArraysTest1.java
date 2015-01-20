@@ -29,12 +29,15 @@ public class ListOfArraysTest1 {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof ListOfArraysTest1)) return false;
+
         ListOfArraysTest1 that = (ListOfArraysTest1) o;
-        return com.google.common.base.Objects.equal(getList1(), that.getList1());
+
+        return !(getList1() != null ? !getList1().equals(that.getList1()) : that.getList1() != null);
+
     }
 
     @Override
     public int hashCode() {
-        return com.google.common.base.Objects.hashCode(getList1());
+        return getList1() != null ? getList1().hashCode() : 0;
     }
 }
