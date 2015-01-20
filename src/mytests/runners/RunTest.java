@@ -49,7 +49,7 @@ public class RunTest {
         List<Integer[][]> l1 = new ArrayList<Integer[][]>();
         l1.add(new Integer[][]{new Integer[]{1,2,3,4},new Integer[]{5,6,7,8}});
         l1.add(new Integer[][]{new Integer[]{1,2,3,4},new Integer[]{5,6,7,8}});
-        List<Integer[][]> l2 = new ArrayList<Integer[][]>(); // same content as l
+        List<Integer[][]> l2 = new ArrayList<Integer[][]>(); // same content as l - considered to be different objects really...
         l2.add(new Integer[][]{new Integer[]{1,2,3,4},new Integer[]{5,6,7,8}});
         l2.add(new Integer[][]{new Integer[]{1,2,3,4},new Integer[]{5,6,7,8}});
         List<Integer[][]> l3 = new ArrayList<Integer[][]>();
